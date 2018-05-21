@@ -1,12 +1,12 @@
 package org.sambasoft.repositories;
 
-import java.util.List;
-
-import org.sambasoft.entities.User;
+import org.sambasoft.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository  extends JpaRepository<User, String> {
+import java.util.List;
 
-	List<User> findByNameLike(String name); 
+public interface UserRepository extends JpaRepository<User, String> {
+
+    List<User> findByNameLike(String name);
 
 }
